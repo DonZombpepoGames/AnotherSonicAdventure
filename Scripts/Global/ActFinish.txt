@@ -356,7 +356,7 @@ event ObjectDraw
 		DrawSpriteScreenXY(3, temp7, 82)
 		temp1 = stage.actNum
 		temp1 += 4
-		DrawSpriteScreenXY(temp1, temp7, 70)
+		DrawSpriteScreenXY(temp1, temp7, 82)
 	else
 		DrawSpriteScreenXY(4, temp7, 82)
 	end if
