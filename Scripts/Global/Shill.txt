@@ -1,0 +1,8 @@
+event ObjectMain
+	BoxCollisionTest(C_TOUCH, object.entityPos, -8, -8, 8, 8, currentPlayer, HITBOX_AUTO, HITBOX_AUTO, HITBOX_AUTO, HITBOX_AUTO)
+	if checkResult == true
+	SetActivePalette(1, 0, 256)
+end event
+event ObjectStartup
+	LoadPalette("EncoreGHZ.act", 1, 0, 0, 256)
+end event

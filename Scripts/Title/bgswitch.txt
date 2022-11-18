@@ -1,0 +1,24 @@
+// ----------------------------------
+// RSDK Project: Sonic 1/Sonic 2
+// Script Description: Sonic Team Object
+// Script Author: Christan Whitehead/Simon Thomley
+// Y QUE VIVA AMLO :D 
+// ----------------------------------
+reserve function BGswappin
+
+
+event ObjectMain
+function BGswappin
+	ReadSaveRAM(saved.titlebg)
+		if saved.titlebg = 0
+		Stage.ActiveLayer[1] = 3
+	else
+	ReadSaveRAM(saved.titlebg)
+		if saved.titlebg = 1
+		Stage.ActiveLayer[1] = 2
+	end if
+end event
+event RSDK
+	LoadSpriteSheet("Global/Display.gif")
+	SetEditorIcon(Icon0,SingleIcon,-16,-16,32,32,1,143)
+end event

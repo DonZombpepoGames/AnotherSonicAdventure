@@ -1,0 +1,172 @@
+[0]ORIGINAL GAMES
+[0]DEVELOPED BY SEGA
+
+
+
+[0]THIS WAS MADE FOR
+[0]SONIC 2 DECOMP BY
+
+
+[3]Display Logos
+
+
+[1]Project Lead
+[2]Don Zombpepo
+
+[1]Scripts
+[2]Don Zombpepo
+
+[1]Title & Menu Music
+[2]Jane-Evelyn "CHIBI-TECH" Nisperos
+[2](M2 Co, Ltd)
+
+
+[0]PROJECT CREDITS
+
+[1]MUSIC
+[2]mattjarett64
+
+[1]MUSIC
+[2]MTVBi 
+
+[1]MUSIC
+[2]SEGA Sound Team
+
+[1]GRAPHICS
+[2]Sega
+
+[1]GRAPHICS
+[2]NickTendoDS
+
+[1]GRAPHICS
+[2]Don Zombpepo
+
+[1]GAME AND LEVEL DESIGN
+[2]Don Zombpepo
+
+[1]SCRIPTS
+[2]Don Zombpepo
+
+[1]SCRIPTS
+[2]Cancer Edition
+
+[1]SCRIPTS
+[2]Team Forever
+
+[1]SCRIPTS
+[2]Christian Whitehead
+
+[1]SCRIPTS
+[2]RubberDuckyCooly
+
+[1]SCRIPTING ADVICE
+[2]ElspethThePict, Hydropper
+
+[1]GENERAL ADVICE AND HELP
+[2]Retro Engine Modding Server
+
+[1]WOOD ZONE BASE
+[2]LanceReborn
+
+[1]MODS USED IN THIS PROJECT
+[2]Sonic 3 Modifications (Cancer Edition)
+[2}Sonic 2 Absolute (TeamForever)
+[2]DEZ Expanded (ScriptKittyJane)
+[2]Stardust Speedway (DonZombpepo)
+[1]MUSIC USED
+[2]Palmtree Panic US. ver. (Sonic CD)
+[2]City Escape Cash Cash RMX (Sonic Gens.)
+[2]Angel Island Zone Act.1 (Sonic 3)
+[2]Spring Yard Zone (Sonic 1)
+[2]Wood Zone Past RMX (MTBVi)
+[2]Lava Reef Zone Act. 2 (Sonic & Knuckles)
+[2]Faded Hill Cover (mattjarrett64)
+[2]Sky Sanctuary Act. 2 (Sonic Gens.)
+[2]A Duel With Metal Sonic (Sonic 4 EP II)
+[2]Sky Sanctuary (from 30th annyversary symphony)
+
+
+[1]ADDITIONAL HELP
+[2]ElMarceU64
+
+[1]ADDITIONAL HELP
+[2]MoonwalkDelta27
+
+[1]ADDITIONAL HELP
+[2]Vebills
+
+[1]SPECIAL THANKS
+[2]Masahiro Sakurai on Creating Games
+
+[1]SPECIAL THANKS
+[2]Retro Engine Modding Server
+
+[1]SPECIAL THANKS
+[2]El Baul de Fangames
+
+[1]SPECIAL THANKS
+[2]SAGExpo
+
+
+[0]RSDKv4 DECOMPILATION
+
+[1]DEVELOPED BY
+[2]RubberDuckyCooly
+
+[1]AND
+[2]Chuli
+
+[0]RETRO ENGINE
+
+[1]MADE BY
+
+[2]Evening Star
+[2]Christian Whitehead
+
+[1]THIS PROJECT WAS POSSIBLE BY
+[2]RubberDuckyCooly
+
+[2]Chuli
+
+[2]Team Forever
+
+[2]MainMemory
+
+[2]Christian Whitehead, Headcannon
+
+[2]SEGA TECHNICAL INSTITUTE
+
+[2]SONIC TEAM
+
+
+
+[1]...and my parents 
+
+[2]Pepe 
+[2]Mabel
+
+
+
+
+
+
+
+
+
+[1]Original games were made by(c) SEGA
+
+
+
+
+[1]ALSO PLAY.....
+[2]Sonic Origins
+[2]Sonic Mania
+[2]Sonic Adventure 2
+[2]Sonic 4 EP II
+[2]Sonic Forces
+
+
+
+
+
+[0] 

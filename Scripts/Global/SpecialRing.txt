@@ -1,0 +1,143 @@
+// ----------------------------------
+// RSDK Project: Sonic 1/Sonic 2
+// Script Description: Special Ring Object
+// Script Author: Christian Whitehead/Simon Thomley
+// Unpacked by Rubberduckycooly's script unpacker
+// ----------------------------------
+
+// Aliases
+private alias 22 : TYPE_SPECIALRING
+
+
+
+private alias object.type : player.type
+private alias object.direction : player.direction
+private alias object.controlMode : player.controlMode
+private alias object.jumpPress : player.jumpPress
+private alias object.jumpHold : player.jumpHold
+private alias object.up : player.up
+private alias object.down : player.down
+private alias object.left : player.left
+private alias object.right : player.right
+private alias object.value0 : player.rings
+private alias object.value16 : player.isPlayer2
+private alias saveRAM[BigRing] : saved.bring
+
+event ObjectMain
+
+
+
+	
+
+// Did P1 collide with the special ring?
+BoxCollisionTest(C_TOUCH, object.entityPos, -16, -16, 16, 16, 0, HITBOX_AUTO, HITBOX_AUTO, HITBOX_AUTO, HITBOX_AUTO)
+
+	if checkResult == true
+		recMilliSeconds = stage.milliSeconds
+		recSeconds = stage.seconds
+		recMinutes = stage.minutes
+		recWaterState = stage.waterState
+		recWaterLevel = stage.waterLevel
+		// Make P1 and its shield "disappear"
+		player[0].type = TypeName[Blank Object]
+		player[playerCount].type = TypeName[Blank Object]
+		player[0].controlMode = -1
+		player[0].direction = FLIP_NONE
+		ResetObjectEntity(4, TypeName[Off Ring], 0, 0, 0)
+		object.drawOrder = 4
+		object.frame = 32
+		StopSfx(SfxName[Flying])
+		StopSfx(SfxName[Tired])
+		PlaySfx(SfxName[Ring], 0)
+		player[0].left = false
+		player[0].right = false
+		saveRAM[7168] = 0
+		currentPlayer = 0
+
+		options.touchControls = 0
+		music.volume -= 2
+		specialStage.nextZone = stage.listPos
+		stage.activeList = SPECIAL_STAGE
+		stage.listPos = specialStage.listPos
+		LoadStage()
+		if stage.player2Enabled == true
+			if player[1].isPlayer2 == true
+				player[1].controlMode = -1
+				player[1].up = false
+				player[1].down = false
+				player[1].left = false
+				player[1].right = false
+				player[1].jumpPress = false
+				player[1].jumpHold = false
+			
+
+			end if
+		end if
+
+	end if
+
+end event
+
+
+event ObjectDraw
+
+		
+
+	temp0 = object.frame
+	temp0 >>= 2
+	if temp0 > 3
+		object.direction = FLIP_X
+	else
+		object.direction = FLIP_NONE
+	end if
+			
+	DrawSpriteFX(temp0, FX_FLIP, object.xpos, object.ypos)
+
+	object.frame++
+	if object.frame > 31
+		object.frame = 0
+	end if
+
+		
+	
+
+	
+
+end event
+
+
+event ObjectStartup
+	
+	LoadSpriteSheet("GHZ/Items2.gif")
+	SpriteFrame(-32, -32, 64, 64, 83, 1)
+	SpriteFrame(-28, -32, 56, 64, 199, 131)
+	SpriteFrame(-24, -32, 48, 64, 148, 1)
+	SpriteFrame(-16, -32, 32, 64, 223, 66)
+	SpriteFrame(-12, -32, 24, 64, 197, 1)
+	SpriteFrame(-16, -32, 32, 64, 223, 66)
+	SpriteFrame(-24, -32, 48, 64, 148, 1)
+	SpriteFrame(-28, -32, 56, 64, 199, 131)
+	SpriteFrame(0, -32, 32, 64, 222, 1)
+	SpriteFrame(-16, -32, 48, 64, 101, 66)
+	SpriteFrame(-24, -32, 56, 64, 150, 66)
+	SpriteFrame(0, -32, 32, 64, 156, 131)
+	SpriteFrame(-24, -32, 56, 64, 150, 66)
+	SpriteFrame(-16, -32, 48, 64, 101, 66)
+	SpriteFrame(0, -32, 32, 64, 222, 1)
+	SpriteFrame(-32, -32, 32, 64, 124, 131)
+	
+
+	
+
+	
+
+end event
+
+event RSDKDraw
+	DrawSprite(0)
+end event
+
+event RSDKLoad
+	LoadSpriteSheet("Global/Items2.gif")
+	SpriteFrame(-32, -32, 64, 64, 83, 1)
+end event

@@ -1,0 +1,89 @@
+// ----------------------------------
+// RSDK Project: Another Sonic Adventure
+// Script Description: Red Star Ring Object
+// Script Author: Don Zombpepo
+// I don't know why i'm making this object
+// ----------------------------------
+private alias object.state   : player.state
+
+// Player aliases
+private alias object.state   : player.state
+private alias object.xpos    : player.xpos
+private alias object.ypos    : player.ypos
+private alias object.value0  : player.rings
+private alias object.value16 : player.isPlayer2
+private alias object.value18 : player.currentPlane
+private alias object.value37 : player.shield
+
+private alias 4 : SHIELD_LIGHTNING
+
+// Function declarations
+reserve function Ring_DebugDraw
+reserve function Ring_DebugSpawn
+
+function Ring_DebugDraw
+	DrawSprite(0)
+end function
+
+
+function Ring_DebugSpawn
+	CreateTempObject(TypeName[Ring], 0, object.xpos, object.ypos)
+	object[tempObjectPos].drawOrder = 4
+end function
+
+
+event ObjectMain
+
+	// Check interaction with players
+	foreach (GROUP_PLAYERS, currentPlayer, ACTIVE_ENTITIES)
+
+		// Make sure that the player isn't supposed to ignore rings right now
+		CheckEqual(player[0].state, PlayerObject_Knockback)
+		temp0 = checkResult
+		CheckEqual(player[currentPlayer].state, PlayerObject_Knockback)
+		temp0 = checkResult
+		CheckEqual(player[currentPlayer].state, PlayerObject_Hurt)
+		temp0 |= checkResult
+
+		if temp0 == false
+			// All checks passed, see if the player is touching the ring
+
+			BoxCollisionTest(C_TOUCH, object.entityPos, -4, -4, 16, 16, currentPlayer, HITBOX_AUTO, HITBOX_AUTO, HITBOX_AUTO, HITBOX_AUTO)
+			if checkResult == true
+				// Player is touching ring - collect it
+
+				// Turn this object into a sparkle
+				object.type = TypeName[Blank Object]
+
+				// Set this object to the same drawOrder as the player
+				object.drawOrder = player[currentPlayer].currentPlane
+
+				// Add it to the player's ring count
+					coinCount++
+					if coinCount > 99
+						player[0].rings = 99
+					end if
+
+		
+				end if
+
+end event
+event ObjectStartup
+
+	LoadSpriteSheet("Global/RedRing.gif")
+	SpriteFrame(0, 0, 32, 32, 0, 0)
+	SpriteFrame(0, 0, 32, 32, 0, 32)
+	SpriteFrame(0, 0, 32, 32, 0, 64)
+	SpriteFrame(0, 0, 32, 32, 0, 96)
+	SpriteFrame(0, 0, 32, 32, 0, 128)
+	SpriteFrame(0, 0, 32, 32, 0, 160)
+	SpriteFrame(0, 0, 32, 32, 0, 192)
+	SpriteFrame(0, 0, 32, 32, 0, 224)
+end event
+
+event ObjectDraw
+
+	DrawSprite(ringFrame)
+
+
+end event
